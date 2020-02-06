@@ -20,7 +20,7 @@
         @foreach (Sport item in @Model)
         {
             <tr>
-                <td>@Html.ActionLink(item.SportName, "Index", "Player", new { id = item.SportId })</td>
+                <td>@Html.ActionLink(item.SportName, "Index", "Players", new { id = item.SportId })</td>
                 <td>@item.Description</td>
             </tr>
         }
