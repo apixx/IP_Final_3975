@@ -1,0 +1,42 @@
+﻿@model IEnumerable<IP_Final_3975.Models.Players>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Player List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.FullName
+                </td>
+                <td>
+                    @item.Age
+                </td>
+                <td>
+                    @item.Country
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Add New Player","Create","Player")
+</div>
