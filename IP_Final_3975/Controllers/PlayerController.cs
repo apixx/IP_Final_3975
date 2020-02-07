@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IP_Final_3975.Controllers
 {
-    public class PlayersController : Controller
+    public class PlayerController : Controller
     {
         //private readonly IPlayersRepo _context;
 
@@ -17,7 +17,7 @@ namespace IP_Final_3975.Controllers
         //}
         private readonly IPFinalContext _context;
 
-        public PlayersController(IPFinalContext context)
+        public PlayerController(IPFinalContext context)
         {
             _context = context;
         }
