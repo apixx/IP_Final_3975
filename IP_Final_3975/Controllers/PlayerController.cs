@@ -25,12 +25,13 @@ namespace IP_Final_3975.Controllers
         public IActionResult Index(int? id)
         {
             var players = _context.Players.Where(p => p.FkSportId == id);
-
+            TempData["id"] = id;
             return View(players.ToList());
         }
 
         public IActionResult Create()
         {
+            TempData.Keep();
             return View();
         }
         

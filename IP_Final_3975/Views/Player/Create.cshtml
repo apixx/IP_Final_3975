@@ -21,7 +21,9 @@
             @*Ova dole treba da e hidden*@
             <div class="form-group">
                 <label asp-for="FkSportId" class="control-label"></label>
-                <select asp-for="FkSportId" class="form-control dropdown-menu" asp-items="ViewBag.FkSportId"></select>
+                <select asp-for="FkSportId" class="form-control" asp-items="ViewBag.FkSportId">
+                    <option>@TempData["id"]</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="Age" class="control-label"></label>
@@ -41,6 +43,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Back to List","Index","Sport")
 </div>
 

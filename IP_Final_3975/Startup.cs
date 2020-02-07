@@ -56,6 +56,7 @@ namespace IP_Final_3975
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCookiePolicy();
 
             app.UseMvc(routes =>
             {
