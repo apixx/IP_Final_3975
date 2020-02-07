@@ -43,7 +43,7 @@ namespace IP_Final_3975.Controllers
             {
                 _context.Add(players);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Create));
+                return RedirectToAction("Index", "Sport");
             }
             return View(players);
         }
